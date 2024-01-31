@@ -50,8 +50,7 @@ function followLink() {
   window.location.href = "https://github.com/cmmarques22";
 }
 
-// key real, nao meter no git
-const apiKey = "fc96497f5fdc6c4ae260bee08de1f62a";
+const apitest = "fc964s97f5fdc6sc4ae260sbee0sde1sfs62a";
 const sunsetElement = document.getElementById("sunsetTime");
 const cityInput = document.getElementById("city");
 const submitButton = document.getElementById("submit-btn");
