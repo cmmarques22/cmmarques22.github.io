@@ -1,35 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple HTML Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        header, footer {
-            background-color: #f0f0f0;
-            padding: 10px;
-            text-align: center;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Bio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jscript.js" defer></script>
+    
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="greeting-container">
+      <img id="userPhoto" src="./images/CarlosM..png" alt="User Photo" />
+      <p class="centered-text" style="font-size: 25px">
+        Hi, I'm Carlos, an aspiring junior developer
+      </p>
+      <button id="scrollButton" onclick="scrollToAbout()">View More</button>
+      <div class="arrow-container">
+        <div class="arrow"></div>
+      </div>
+    </div>
 
-<header>
-    <h1>Welcome to My Simple HTML Page</h1>
-</header>
+    <header class="nav">
+      <nav>
+        <a href="#home" onclick="showHome()">Home</a>
+        <a href="#about" onclick="showAbout()">About</a>
+        <a href="#contact" onclick="showContact()">Contact</a>
+      </nav>
+    </header>
 
-<main>
-    <p>This is a HTML 5 page. You can add more content here.</p>
-</main>
+    <div id="about-container">
+      <div>
+        <h2 class="centered-text">About Me</h2>
+        <!-- container2 -->
+        <div id="about-content">
+          <!-- container 3.1 -->
+          <div id="description-text">
+            <p class="centered-text" style="font-size: 20px">
+              A curious person looking for an opportunity to follow my passion:
+              breaking into the world of technology and programming. With a
+              critical and open mind, I am always looking to explore new ideas.
+              I enjoy sharing knowledge and collaborating with others to achieve
+              common goals. I am currently attending a coding bootcamp to gain
+              the skills and knowledge to start a new career as a programmer.
+              Endless curiosity drives me, so I am sure I could be an asset to
+              your team.
+            </p>
+          </div>
+          <!-- container3.2 -->
 
-<footer>
-    <p>&copy; 2023 Carlos</p>
-</footer>
+          <div class="skills">
+            <!-- colunas -->
+            <div class="skills-column">
+              <div class="skills-item">
+                <img src="./images/html.png" alt="html" />
+                <div class="skills-name">HTML</div>
+              </div>
+              <div class="skills-item">
+                <img src="./images/CSS3_logo.svg.png" alt="css" />
+                <div class="skills-name">CSS</div>
+              </div>
+              <div class="skills-item">
+                <img src="./images/js.png" alt="javascript" />
+                <div class="skills-name">JavaScript</div>
+              </div>
+            </div>
+            <div class="skills-column">
+              <div class="skills-item">
+                <img src="./images/Git-Icon-1788C.png" alt="git" />
+                <div class="skills-name">Git</div>
+              </div>
+              <div class="skills-item skills-item--css">
+                <img src="./images/java-original.svg" alt="java" />
+                <div class="skills-name">Java</div>
+              </div>
+              <div class="skills-item">
+                <img src="./images/aws.svg.png" alt="aws" />
+                <div class="skills-name">AWS</div>
+              </div>
+              <div class="skills-item">
+                <img src="./images/Microsoft_.NET_logo.png" alt=".net" />
+                <div class="skills-name">dotNET</div>
+              </div>
+            </div>
+            <div class="skills-column">
+              <div class="skills-item">
+                <img src="./images/sql-server.png" alt="SQLServer" />
+                <div class="skills-name">SQLServer</div>
+              </div>
+              <div class="skills-item">
+                <img src="./images/apps.png" alt="PowerApps" />
+                <div class="skills-name">PowerApps</div>
+              </div>
+              <div class="skills-item">
+                <img src="./images/Microsoft-Power-BI-Logo.png" alt="PowerBI" />
+                <div class="skills-name">PowerBI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="buttonContainer">
+        <button id="downloadCVButton" onclick="downloadFile()">
+          Download My CV
+        </button>
+        <button id="githubButton" onclick="followLink()">
+          Visit my GitHub
+        </button>
+      </div>
+    </div>
 
-</body>
+    <div class="container centered-text" id="contact-container">
+      <div id="contact">
+        <h2>Contact</h2>
+        <p class="centered-text" style="font-size: 20px">
+          Have a question? Feel free to to leave your details and i'll get back
+          to you.
+        </p>
+        <div id="contact-form">
+          <input
+            name="subject"
+            id="subject"
+            type="text"
+            placeholder="Subject"
+          />
+          <input name="email" id="email" type="email" placeholder="Email" />
+
+          <textarea
+            id="message"
+            name="message"
+            type="message"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <div>
+          <button name="button" id="submit-button" onclick="submitForm()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="centered-text">Sunset Time Search</h1>
+
+    <div class="centered-text">
+      <label for="city">Cidade:</label>
+      <input
+        type="text"
+        id="city"
+        name="city"
+        placeholder="Insira nome de uma Cidade"
+      />
+      <button type="submit" id="submit-btn">Obter horas</button>
+    </div>
+
+    <div id="weather-info">
+      <p class="centered-text" id="sunsetTime"></p>
+    </div>
+
+    <footer>
+      <div class="centered-text">
+        <div>
+          <a href="https://github.com/cmmarques22">
+            <div>
+              <img src="./images/git.png" alt="github" width="50px" height="50px" />
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="mailto:carlos.marques22@live.com.com">
+            <div>
+              <img src="./images/mail.png" alt="email" width="50px" height="50px" />
+            </div>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/carlos--marques/">
+            <div>
+              <img src="./images/in.png" alt="linkedin" width="50px" height="50px" />
+            </div>
+          </a>
+        </div>
+        
+      <p>Carlos Marques 2024</p>
+    </footer>
+
+  </body>
 </html>
-
