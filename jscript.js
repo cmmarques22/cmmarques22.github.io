@@ -27,6 +27,14 @@ function showContact() {
     .scrollIntoView({ behavior: "smooth" });
 }
 
+function showPortefolio() {
+  document
+    //localizar por elemento
+    window.location.href = "https://cmmarques22.github.io/portefolio/";
+
+}
+
+
 function submitForm() {
   //variables
   let subject = document.getElementById("subject").value;
