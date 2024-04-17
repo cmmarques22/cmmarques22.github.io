@@ -46,9 +46,14 @@ function downloadFile() {
     "https://drive.google.com/file/d/1wmUIJNhKvd9rrGJxkYycoPhA1kMDLeS0/view?usp=drive_link";
 }
 
-function followLink() {
+function followGitLink() {
   window.location.href = "https://github.com/cmmarques22";
 }
+
+function followPPLink() {
+  window.location.href = "https://cmmarques22.github.io/portefolio";
+}
+
 
 const apitest = "fc964s97f5fdc6sc4ae260sbee0sde1sfs62a";
 const sunsetElement = document.getElementById("sunsetTime");
