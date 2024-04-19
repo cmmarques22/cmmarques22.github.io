@@ -53,6 +53,7 @@ body {
 
 /* Arrow */
 .arrow-container {
+  position: relative; /* Added position */
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -61,7 +62,15 @@ body {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 20px solid #333;
+  transition: transform 0.3s ease; /* Added transition */
+
 }
+
+.arrow-container:hover .arrow {
+  transform: translateY(-5px); 
+  /* Move the arrow up by 5px on hover */
+}
+
 
 /* About Me */
 #about-container {
